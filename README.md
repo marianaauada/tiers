@@ -1,15 +1,16 @@
 # Tiers
 
 ⭢ Link do Google Colab para a visualização das tabelas.
+
 https://colab.research.google.com/drive/1xLRH-LPHSKECMB5pYR3pKcw9iIGSR6n1?usp=sharing
 
-# 1. Clonagem de GitHub
+## 1. Clonagem de GitHub
 
 ```
 ! git clone https://github.com/renatopuga/lmabrasil-hg38.git
 ```
 
-Output:
+### Output:
 ```
 Cloning into 'lmabrasil-hg38'...
 remote: Enumerating objects: 226, done.
@@ -20,7 +21,7 @@ Receiving objects: 100% (226/226), 8.63 MiB | 22.96 MiB/s, done.
 Resolving deltas: 100% (106/106), done.
 ```
 
-# 2. Instalar bcftools (+split-vep é uma ferramenta dentro de bcftools)
+## 2. Instalar bcftools (+split-vep é uma ferramenta dentro de bcftools)
 
 ```
 %%bash
@@ -37,6 +38,7 @@ sudo apt install bcftools
 
 # WP017
 
+### Etapa 1
 ```
 %%bash
 VEP_VCF="lmabrasil-hg38/vep_output/liftOver_WP017_hg19ToHg38.vep.vcf"
@@ -55,6 +57,7 @@ bcftools +split-vep \
 -p x  >> liftOver_WP017_hg19ToHg38.vep.tsv
 ```
 
+### Etapa 2
 ```
 import pandas as pd
 import numpy as np
@@ -171,7 +174,7 @@ print("OK ->", OUTPUT_TSV)
 print(df["Tier"].value_counts(dropna=False))
 ```
 
-Output:
+### Output:
 ```
 Driver genes carregados: 64
 OK -> /content/WP017-tier.tsv
@@ -181,6 +184,7 @@ Tier 1       8
 Name: count, dtype: int64
 ```
 
+### Etapa 3
 ```
 # =========================
 # IMPORTS
@@ -245,8 +249,9 @@ driver_genes = load_driver_genes(driver_url)
 df
 ```
 
-↳ O Output esperado é uma longa tabela e você encontra ela no Colab. 
+#### ↳ O Output esperado é uma longa tabela e você encontra ela no Colab. 
 
+### Etapa 4 
 ```
 import pandas as pd
 import re
@@ -376,6 +381,7 @@ pd.Series(sorted(set_t1 - set_driver)).to_csv("/content/venn_t1_only.txt", index
 
 # WP019
 
+### Etapa 1
 ```
 %%bash
 VEP_VCF="lmabrasil-hg38/vep_output/liftOver_WP019_hg19ToHg38.vep.vcf"
@@ -392,6 +398,7 @@ bcftools +split-vep \
 -p x  >> liftOver_WP019_hg19ToHg38.vep.tsv
 ```
 
+### Etapa 2
 ```
 import pandas as pd
 import numpy as np
@@ -508,7 +515,7 @@ print("OK ->", OUTPUT_TSV)
 print(df["Tier"].value_counts(dropna=False))
 ```
 
-Output:
+### Output:
 ```
 Driver genes carregados: 64
 OK -> /content/WP019-tier.tsv
@@ -518,6 +525,7 @@ Tier 1       3
 Name: count, dtype: int64
 ```
 
+### Etapa 3
 ```
 # =========================
 # IMPORTS
@@ -582,8 +590,9 @@ driver_genes = load_driver_genes(driver_url)
 df
 ```
 
-↳ O Output esperado é uma longa tabela e você encontra ela no Colab. 
+#### ↳ O Output esperado é uma longa tabela e você encontra ela no Colab. 
 
+### Etapa 4
 ```
 import pandas as pd
 import re
@@ -714,6 +723,7 @@ pd.Series(sorted(set_t1 - set_driver)).to_csv("/content/venn_t1_only.txt", index
 
 # WP058
 
+### Etapa 1
 ```
 %%bash
 VEP_VCF="lmabrasil-hg38/vep_output/liftOver_WP058_hg19ToHg38.vep.vcf"
@@ -730,6 +740,7 @@ bcftools +split-vep \
 -p x  >> liftOver_WP058_hg19ToHg38.vep.tsv
 ```
 
+### Etapa 2
 ```
 import pandas as pd
 import numpy as np
@@ -846,7 +857,7 @@ print("OK ->", OUTPUT_TSV)
 print(df["Tier"].value_counts(dropna=False))
 ```
 
-Output:
+### Output:
 ```
 Driver genes carregados: 64
 OK -> /content/WP058-tier.tsv
@@ -855,6 +866,7 @@ Tier 3    1331
 Name: count, dtype: int64
 ```
 
+### Etapa 3
 ```
 # =========================
 # IMPORTS
@@ -919,8 +931,9 @@ driver_genes = load_driver_genes(driver_url)
 df
 ```
 
-↳ O Output esperado é uma longa tabela e você encontra ela no Colab. 
+#### ↳ O Output esperado é uma longa tabela e você encontra ela no Colab. 
 
+### Etapa 4
 ```
 import pandas as pd
 import re
@@ -1051,6 +1064,7 @@ pd.Series(sorted(set_t1 - set_driver)).to_csv("/content/venn_t1_only.txt", index
 
 # WP068
 
+### Etapa 1
 ```
 %%bash
 VEP_VCF="lmabrasil-hg38/vep_output/liftOver_WP068_hg19ToHg38.vep.vcf"
@@ -1067,6 +1081,7 @@ bcftools +split-vep \
 -p x  >> liftOver_WP068_hg19ToHg38.vep.tsv
 ```
 
+### Etapa 2
 ```
 import pandas as pd
 import numpy as np
@@ -1183,7 +1198,7 @@ print("OK ->", OUTPUT_TSV)
 print(df["Tier"].value_counts(dropna=False))
 ```
 
-Output:
+### Output:
 ```
 Driver genes carregados: 64
 OK -> /content/WP068-tier.tsv
@@ -1193,6 +1208,7 @@ Tier 1       1
 Name: count, dtype: int64
 ```
 
+### Etapa 3
 ```
 # =========================
 # IMPORTS
@@ -1257,9 +1273,9 @@ driver_genes = load_driver_genes(driver_url)
 df
 ```
 
-↳ O Output esperado é uma longa tabela e você encontra ela no Colab. 
+#### ↳ O Output esperado é uma longa tabela e você encontra ela no Colab. 
 
-
+### Etapa 4
 ```
 import pandas as pd
 import re
