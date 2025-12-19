@@ -260,18 +260,18 @@ from matplotlib_venn import venn2
 import zipfile
 import os
 
-# Define the path to the zip file
+# Defina o caminho para o arquivo ZIP
 ZIP_ARCHIVE_PATH = "/content/cgi_somaticmfwp058_results.zip"
-# Define the directory where content will be extracted
+# Defina o diretório onde o conteúdo será extraído
 EXTRACT_TO_DIR = "/content/extracted_cgi_data"
 
-# Ensure the extraction directory exists
+# Garanta que o diretório de extração exista
 os.makedirs(EXTRACT_TO_DIR, exist_ok=True)
 
 extracted_alterations_tsv_path = None
 try:
     with zipfile.ZipFile(ZIP_ARCHIVE_PATH, 'r') as zip_ref:
-        # Search for 'alterations.tsv' within the zip file.
+        # Procure pelo arquivo “alterations.tsv” dentro do arquivo ZIP
         # This handles cases where it might be directly at root or nested in a folder.
         for member in zip_ref.namelist():
             if member.endswith('alterations.tsv'):
@@ -282,7 +282,7 @@ try:
         if not extracted_alterations_tsv_path:
             raise FileNotFoundError(f"Could not find 'alterations.tsv' within {ZIP_ARCHIVE_PATH}")
 
-    # Update ALTERATIONS_TSV to point to the newly extracted file
+    # Atualize o ALTERATIONS_TSV para apontar para o arquivo recém extraído
     ALTERATIONS_TSV = extracted_alterations_tsv_path
     print(f"'{os.path.basename(ALTERATIONS_TSV)}' extracted and path updated to: {ALTERATIONS_TSV}")
 
@@ -601,18 +601,18 @@ from matplotlib_venn import venn2
 import zipfile
 import os
 
-# Define the path to the zip file
+# Defina o caminho para o arquivo ZIP
 ZIP_ARCHIVE_PATH = "/content/cgi_somaticmfwp019_results.zip"
-# Define the directory where content will be extracted
+# Defina o diretório onde o conteúdo será extraído
 EXTRACT_TO_DIR = "/content/extracted_cgi_data"
 
-# Ensure the extraction directory exists
+# Garanta que o diretório de extração exista
 os.makedirs(EXTRACT_TO_DIR, exist_ok=True)
 
 extracted_alterations_tsv_path = None
 try:
     with zipfile.ZipFile(ZIP_ARCHIVE_PATH, 'r') as zip_ref:
-        # Search for 'alterations.tsv' within the zip file.
+        # Procure pelo arquivo “alterations.tsv” dentro do arquivo ZIP
         # This handles cases where it might be directly at root or nested in a folder.
         for member in zip_ref.namelist():
             if member.endswith('alterations.tsv'):
@@ -623,7 +623,7 @@ try:
         if not extracted_alterations_tsv_path:
             raise FileNotFoundError(f"Could not find 'alterations.tsv' within {ZIP_ARCHIVE_PATH}")
 
-    # Update ALTERATIONS_TSV to point to the newly extracted file
+    # Atualize o ALTERATIONS_TSV para apontar para o arquivo recém extraído
     ALTERATIONS_TSV = extracted_alterations_tsv_path
     print(f"'{os.path.basename(ALTERATIONS_TSV)}' extracted and path updated to: {ALTERATIONS_TSV}")
 
@@ -942,18 +942,18 @@ from matplotlib_venn import venn2
 import zipfile
 import os
 
-# Define the path to the zip file
+# Defina o caminho para o arquivo ZIP
 ZIP_ARCHIVE_PATH = "/content/cgi_somaticmfwp058_results.zip"
-# Define the directory where content will be extracted
+# Defina o diretório onde o conteúdo será extraído
 EXTRACT_TO_DIR = "/content/extracted_cgi_data"
 
-# Ensure the extraction directory exists
+# Garanta que o diretório de extração exista
 os.makedirs(EXTRACT_TO_DIR, exist_ok=True)
 
 extracted_alterations_tsv_path = None
 try:
     with zipfile.ZipFile(ZIP_ARCHIVE_PATH, 'r') as zip_ref:
-        # Search for 'alterations.tsv' within the zip file.
+        # Procure pelo arquivo “alterations.tsv” dentro do arquivo ZIP
         # This handles cases where it might be directly at root or nested in a folder.
         for member in zip_ref.namelist():
             if member.endswith('alterations.tsv'):
@@ -964,7 +964,7 @@ try:
         if not extracted_alterations_tsv_path:
             raise FileNotFoundError(f"Could not find 'alterations.tsv' within {ZIP_ARCHIVE_PATH}")
 
-    # Update ALTERATIONS_TSV to point to the newly extracted file
+    # Atualize o ALTERATIONS_TSV para apontar para o arquivo recém extraído
     ALTERATIONS_TSV = extracted_alterations_tsv_path
     print(f"'{os.path.basename(ALTERATIONS_TSV)}' extracted and path updated to: {ALTERATIONS_TSV}")
 
@@ -1284,18 +1284,18 @@ from matplotlib_venn import venn2
 import zipfile
 import os
 
-# Define the path to the zip file
+# Defina o caminho para o arquivo ZIP
 ZIP_ARCHIVE_PATH = "/content/cgi_somaticmfwp068_results.zip"
-# Define the directory where content will be extracted
+# Defina o diretório onde o conteúdo será extraído
 EXTRACT_TO_DIR = "/content/extracted_cgi_data"
 
-# Ensure the extraction directory exists
+# Garanta que o diretório de extração exista
 os.makedirs(EXTRACT_TO_DIR, exist_ok=True)
 
 extracted_alterations_tsv_path = None
 try:
     with zipfile.ZipFile(ZIP_ARCHIVE_PATH, 'r') as zip_ref:
-        # Search for 'alterations.tsv' within the zip file.
+        # Procure pelo arquivo “alterations.tsv” dentro do arquivo ZIP
         # This handles cases where it might be directly at root or nested in a folder.
         for member in zip_ref.namelist():
             if member.endswith('alterations.tsv'):
@@ -1306,7 +1306,7 @@ try:
         if not extracted_alterations_tsv_path:
             raise FileNotFoundError(f"Could not find 'alterations.tsv' within {ZIP_ARCHIVE_PATH}")
 
-    # Update ALTERATIONS_TSV to point to the newly extracted file
+    # Atualize o ALTERATIONS_TSV para apontar para o arquivo recém-extraído
     ALTERATIONS_TSV = extracted_alterations_tsv_path
     print(f"'{os.path.basename(ALTERATIONS_TSV)}' extracted and path updated to: {ALTERATIONS_TSV}")
 
